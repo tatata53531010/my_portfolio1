@@ -1,0 +1,568 @@
+@charset "UTF-8";
+
+/* 全てのwebページに適用される */
+html {
+    font-family: sans-serif;
+}
+html * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eeece9;
+}
+#wrapper {
+    margin: 0 auto;
+    max-width: 984px;
+}
+h2,h3,h4,h5,h6 {
+    margin-top: 0;
+}
+h2 {
+    color: #3f5170;
+    font-size: 22px;
+    border-bottom: 3px dotted #3f5170;
+    padding: 5px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+a {
+    cursor: pointer;
+}
+a:link {
+    color: #6d7886;
+}
+a:visited {
+    color: #6d7886;
+}
+a:hover {
+    font-weight: 700;
+    text-decoration: none;
+}
+.text_align {
+    text-align: center;
+}
+
+
+/* 全てのwebページに適用される - ヘッダー */
+.header {
+    position: fixed;
+    width: 100%;
+    /* 他のコンテンツより上に表示 */
+    z-index: 100;
+}
+#key_visual {
+    padding-top: 70px;
+}
+.space {
+    padding-top: 100px;
+}
+
+
+
+/* 全てのwebページに適用される - メイン */
+/* トップに戻るボタン */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  
+    display: none;
+    width: 40px;
+    height: 40px;
+  
+    background-color: #f0f0f0;
+    color: #333;
+    opacity: 0.6;
+  
+    font-size: 1.6rem;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  /* マウスを乗せた時に透明度を変える */
+  .back-to-top:hover {
+    opacity: 1;
+  }
+  #background_image {
+    padding: 40px 0 40px;
+  }
+
+
+/* 全てのwebページに適用される - フッター */
+footer {
+    background-color: #956840;
+    text-align: center;
+}
+footer #footer_nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+footer #footer_nav {
+    background-color: #f0e5d6;
+    padding: 10px 0;
+}
+footer #footer_nav li {
+    display: inline;
+    border-left: 1px solid #333;
+    margin-left: 8px;
+    padding-left: 8px;
+    font-size: smaller;
+}
+footer #footer_nav li:last-child {
+    border-right: solid 1px #333;
+    padding: 0 8px;
+}
+footer small {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+}
+/* 疑似クラス */
+footer a:link {
+    color: #2e1811;
+}
+footer a:visited {
+    color: #2e1811;
+}
+footer a:hover {
+    color: #333;
+    font-weight: 700;
+}
+
+/* 個別のスタイル */
+/* index.html */
+#key_visual {
+    margin-bottom: 25px;
+}
+#key_visual img {
+    height: 550px;
+}
+/* vueカルーセル */
+#carousel {
+    background-color: #fff;
+}
+.VueCarousel {
+    min-width: 300px;
+}
+.VueCarousel-slide {
+    height: 300px;
+    text-align: center;
+}
+.news_item {
+    margin: 0;
+}
+/* ごはんタイム */
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #FFE0D6;
+    margin: 60px 0 60px;
+    padding: 30px 0 30px;
+}
+.item_wrap {
+    max-width: 420px;
+}
+.icon_block {
+    display: flex;
+    justify-content: space-around;
+}
+.icon_block{
+    padding: 20px 0 30px;
+}
+.icon {
+    background: #FFE0D6;
+    border-radius: 30px;
+    padding: 18px 30px;
+}
+.image_wrap {
+    padding-top: 20px;
+}
+/* 警告 */
+.warning_wrap {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.warning_item {
+    width: 32%;
+    background: #FFE0D6;
+    padding: 40px;
+    border-radius: 10px;
+    margin-right: 2%;
+}
+.warning_image {
+    text-align: center;
+}
+/* テーブル */
+#info {
+    border-collapse: collapse;
+}
+#info th, #info td {
+    padding: 8px;
+    border: 1px solid #bec2c7;
+    text-align: left;
+}
+#info th {
+    background-color: #dde2ea;
+    width: 90px;
+    color: #3f5170;
+    vertical-align: top;
+}
+
+
+/* introduction.html */
+.cat_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+.cat_list ul li {
+    display: inline-block;
+    max-width: 246px;
+    font-size: 16px;
+    padding: 0 10px 60px;
+}
+/* 画像のフェードイン・フェードアウト */
+/* オーバーレイする背景 初期状態 */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+  
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  /* オーバーレイする背景 開始時アニメーション */
+  .mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+  }
+  /* オーバーレイする背景 終了時アニメーション */
+  .mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+  }
+  
+  /* コンテンツ 初期状態 */
+  .mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+  
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  /* コンテンツ 開始時アニメーション */
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+  }
+  /* コンテンツ 終了時アニメーション */
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+  }
+  .animated {
+    /* 最初から非表示 */
+    opacity: 0;
+  }
+  /* プリントするとき表示される */
+  @media print {
+    .animated {
+      opacity: 1; 
+    }
+  }
+
+.cat_image {
+    border: 15px solid #fff;
+}
+.cat_image:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+.cat_text {
+    padding-top: 20px;
+}
+.cat_name, .cat_type {
+    display: block;
+    text-align: center;
+}
+.new {
+    color: #fe3571;
+    margin-left: 4px;
+    font-size: 90%;
+}
+.cat_name::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    margin: 10px auto;
+    background: #fcc8b7;
+}
+.cat_type {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #5d5d5d;
+}
+.cat_birth {
+    display: flex;
+    justify-content: center;
+    color: #808080;
+}
+.cat_birth img {
+        width: 12px;
+        margin-right: 6px;
+        display: table-cell;
+        vertical-align: middle;
+}
+
+
+/* menu.html */
+.menu_item {
+    display: flex;
+    border-bottom: 1px dashed #dec2c7;
+    padding: 20px 8px;
+}
+.menu_photo {
+    margin-right: 16px;
+    flex: 1 1 auto;
+}
+.menu_photo img {
+    width: 600px;
+    height: 400px;
+}
+.menu_text {
+    flex: 0 0 336px;
+}
+
+
+/* access,html */
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+/* Googleマップ */
+#map_wrapper {
+    width: 100%;
+    display: table;
+    border: 2px solid #FFE0D6;
+}
+#map_wrapper #map {
+    width: 50%;
+    height: 400px;
+    display: table-cell;
+}
+.map_text {
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+/* quiz.html */
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+}
+.quiz-1, .quiz-2, .quiz-3 {
+    padding: 10px 30px;
+}
+
+
+/* contact.html */
+form {
+    background-color: rgb(230 230 230);
+}
+.form_item {
+    padding: 12px;
+    border-bottom: 1px dashed #bec2c7;
+}
+.form_text {
+    text-align: center;
+    margin: 0;
+    padding-top: 30px;
+}
+.form_text p {
+    margin: 0;
+}
+#form_footer {
+    background-color: #eeece9;
+    padding-top: 50px;
+}
+#form_submit {
+    text-align: center;
+    padding-top: 50px;
+}
+#form_footer input {
+    background-color: #EB9A81;
+    font-size: 14px;
+    max-width: 300px;
+    color: #fff;
+    padding: 12px 0;
+    width: 50%;
+    display: inline-block;
+    border-radius: 30px;
+    -webkit-appearance: none;
+    border: 0px;
+}
+select {
+    width: 50em;
+}
+input[name="name"] {
+    width: 50em;
+}
+input[name="email"] {
+    width: 50em;
+}
+input[name="subject"] {
+    width: 50em;
+}
+textarea {
+    width: 50em;
+    height: 15em;
+}
+form small {
+    color: #EB9A81;
+}
+/* ページが遷移しなかった時 */
+.error {
+    color: #c00;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+/* result.html */
+#result {
+	border: 1px solid #cccccc;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 984px;
+}
+#test th, td {
+	padding: 0.5em;
+	border: 1px solid #cccccc;
+	text-align: left;
+	vertical-align: top;
+}
+#test th {
+	width: 100px;
+	background-color: #eeeeee;
+}
+#submit_or_not {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* profile.html */
+.profile_item {
+    display: inline-block;
+}
+
+
+/* スマートフォン向けcss */
+@media (max-width: 767px) {
+    /* 全てのwebページに適用される */
+    #wrapper {
+        margin: 0 8px;
+    }
+	
+    #footer_nav {
+        font-size: 12px;
+    }
+    
+
+    /* index.html - キービジュアル */
+    #key_visual img {
+        height: 440px;
+    }
+    /* ごはんタイム */
+    .wrap {
+        display: block;
+    }
+    .item_wrap {
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+    .mobile_space {
+        padding-top: 30px;
+        border-top: 2px dashed #FFE0D6;
+    }
+    /* 警告 */
+    .warning_wrap {
+        display: block;
+    }
+    .warning_item {
+        width: 300px;
+        margin: 0 auto 5px;
+    }
+
+
+    /* introduction */
+    .cat_list ul li {
+        width: 50%;
+    }
+
+
+    /* access.html */
+    #map_wrapper {
+        display: block;
+    }
+    #map_wrapper #map {
+        display: block;
+        width: 100%;
+    }
+    .map_text {
+        padding: 30px 0;
+    }
+
+
+    /* menu.html - 横並び解除 */
+    .menu_item {
+        display: block;
+    }
+    .menu_photo {
+        margin-right: 0;
+        width: 100%;
+    }
+    .menu_text {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+
+    /* quiz.html */
+    .choices {
+        display: block;
+        text-align: center;
+    }
+    .quiz-1, .quiz-2, .quiz-3 {
+        padding: 10px;
+        width: 80%;
+    }
+
+
+    /* contact.html - フォーム */
+    select {
+        width: 100%;
+    }
+    input[name="name"] {
+        width: 100%;
+    }
+    input[name="email"] {
+        width: 100%;
+    }
+    input[name="subject"] {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+}

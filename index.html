@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://tatata53531010.github.io/my_portfolio/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>CAT CAFE MIKUへようこそ</title>
+</head>
+<body>
+<div id="wrapper">
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-light bg-light p-3">
+            <!-- ブランドロゴ -->
+            <a href="./index.html" class="navbar-brand">CAT CAFE MIKU</a>
+            <!-- 横幅が狭いときに出るハンバーガーボタン -->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- メニュー項目 -->
+            <div class="collapse navbar-collapse" id="nav-bar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a href="./index.html" class="nav-link">ホーム</a></li>
+                    <li class="nav-item"><a href="./introduction.html" class="nav-link">猫紹介</a></li>
+                    <li class="nav-item"><a href="./access.html" class="nav-link">アクセス</a></li>
+                    <li class="nav-item"><a href="./menu.html" class="nav-link">メニュー</a></li>
+                    <li class="nav-item"><a href="./quiz.html" class="nav-link">クイズ</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">お問い合わせ</a></li>
+                    <li class="nav-item"><a href="./profile.html" class="nav-link">自己紹介</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ここまでヘッダー -->
+    <!-- メイン -->
+    <div id="key_visual" class="space">
+        <img src="./key_visual1.jpg" alt="" width="984">
+    </div>
+    <main>
+        <p class="text_align pt-5">大阪駅から徒歩1分、阪急梅田駅から徒歩12分。<br>
+            やんちゃな子からおとなしい子、多種多様な可愛い猫ちゃんたちと綺麗な空間に癒される猫カフェです。</p><br>
+        <p class="text_align pb-5">【短縮営業中】10:00~18:00（最終入店17:30)</p>
+        
+        <div id="carousel">
+            <carousel v-bind:per-page-custom="[[0, 1], [768, 2], [992, 3]]">
+                <slide>
+                <img src="./02.jpg" width="300" alt="内装の画像">
+                </slide>
+                <slide>
+                <img src="./03.jpg" width="300" alt="内装の画像">
+                </slide>
+                <slide>
+                <img src="./04.jpg" width="300" alt="内装の画像">
+                </slide>
+                <slide>
+                <img src="./05.jpg" width="300" alt="内装の画像">
+                </slide>
+                <slide>
+                    <img src="./06.jpg" width="300" alt="内装の画像">
+                </slide>
+            </carousel>
+        </div>
+
+        <div class="wrap">
+            <div class="item_wrap">
+                <div class="text_wrap">
+                    <h3 class="text_align">ごはんタイム</h3>
+                    <div class="icon_block">
+                        <div class="icon">
+                            <span>11:00</span>
+                        </div>
+                        <div class="icon">
+                            <span>19:00</span>
+                        </div>
+                    </div>
+                    <p>1日2回の、ごはんタイム。みんなが一列に並んで、元気良く夢中でモグモグしています。よそ見ばかりで食べるのが遅いあの子、最後までがんばって一生懸命食べてるあの子。食いしん坊のあの子は、たまにお隣のごはんにお邪魔したり。<br>
+                    ぜひ、とっても楽しくかわいい時間を見に来てください。</p>
+                </div>
+                <div class="image_wrap">
+                    <img src="./ete.jpeg" alt="猫のごはんタイムの画像">
+                </div>
+            </div>
+
+            <div class="mobile_space"></div>
+
+            <div class="item_wrap">
+                <div class="text_wrap">
+                    <h3 class="text_align">猫のおやつ</h3>
+                    <div class="icon_block">
+                        <div class="icon">
+                            <span>550円</span>
+                        </div>
+                    </div>
+                </div>
+                <p>猫ちゃんが大好きなおやつを販売しています。<br>
+                    一緒に遊んだあとや、ゆっくり過ごしたあとに、ご褒美として。とっても嬉しそうに食べてくれるので、こちらまで嬉しくなります。猫ちゃんにモテモテのおやつは、数量限定です。<br>
+                    <a href="./menu.html">※詳しくはこちら</a>
+                </p>
+                <div class="image_wrap">
+                    <img src="./image_02.jpg" alt="猫のおやつの画像">
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text_align">店からのお願い</h3>
+        <div class="warning_wrap">
+            <div class="warning_item">
+                <div class="warning_image">
+                    <img src="./warning1.png" alt="警告" width="180" height="180">
+                </div>
+                <div class="warning_text">
+                    <p class="text_align pt-5">猫ちゃんを追いかけたり、無理やり触ったりはしないでください。</p>
+                </div>
+            </div>
+
+            <div class="warning_item">
+                <div class="warning_image">
+                    <img src="./warning2.png" alt="警告" width="180" height="180">
+                </div>
+                <div class="warning_text">
+                    <p class="text_align pt-5">猫ちゃんに食べ物や飲み物を与えないでください。 ※食べ物持込禁止<br>（飲み物は持込可能）</p>
+                </div>
+            </div>
+
+            <div class="warning_item">
+                <div class="warning_image">
+                    <img src="./warning3.png" alt="警告" width="180" height="180">
+                </div>
+                <div class="warning_text">
+                    <p class="text_align pt-5">猫ちゃんを撮影するときはフラッシュをOFFにしてください。</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="news" class="pt-5">News</h2>
+        <p>当店ではもうお家では飼えなくなった猫、引取先が見つからなかった猫などを保護し、皆様に可愛がって可愛がって貰いたい！というものをコンセプトにした保護猫カフェです！そういった猫たちが居ましたら快く引き受けておりますので是非当店までご連絡お願いいたします！！</p>
+        <p>引き取ってくださるお客様もいるため日々保護猫達とはお別れの日々です…<br>
+        ですが毎月１０日には<a href="./introduction.html">新猫たち</a>がやってきます！そんな新しい猫ちゃんたちもどうか可愛がってください！<br>
+        そしてお気に入りの猫ちゃんが見つかれば引き取っていただいても構いません！どうか末長く猫ちゃん達をよろしくお願いします！！</p>
+
+        <h2 class="pt-5">店舗情報</h2>
+            <table id="info">
+                <tr>
+                    <th>住所</th>
+                    <td>〒000-9999 大阪府大阪市〇〇3-30-8（<a href="access.html">地図</a>）</td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td>09-0000-1111</td>
+                </tr>
+                <tr>
+                    <th>営業時間</th>
+                    <td>10:00～22:00</td>
+                </tr>
+                <tr>
+                    <th>定休日</th>
+                    <td>水曜日・日曜日</td>
+                </tr>
+                <tr>
+                    <th>料金</th>
+                    <td>220円<small>(税込)</small> / 30分<br>最大料金 1640円<small>(税込)</small></td>
+                </tr>
+                <tr>
+                    <th>ご予約</th>
+                    <td>ご予約は、お電話もしくは<a href="contact.html">お問い合わせフォーム</a>より受け付けております。ご予約希望日時と人数をお知らせください。<br>
+                    ※フォームからのご予約にはお時間がかかる場合がございますので、ご了承ください。</td>
+                </tr>
+            </table>
+
+            <!-- トップに戻るボタン -->
+            <a href="#" class="back-to-top">▲</a>
+            <div id="background_image">
+                <img src="./footer-bg.png" alt="">
+            </div>
+    </main>
+    
+    <!-- ここまでメイン -->
+    <!-- フッター -->
+    <footer>
+        <div id="footer_nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="introduction.html">猫紹介</a></li>
+                <li><a href="access.html">アクセス</a></li>
+                <li><a href="menu.html">メニュー</a></li>
+                <li><a href="quiz.html">クイズ</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="profile.html">自己紹介</a></li>
+            </ul>
+        </div>
+        <small>&copy;2021 MIKU All Rights Reserved.</small>
+    </footer>
+    <!-- ここまでフッター -->
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS, then Font Awesome -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+<script src="https://ssense.github.io/vue-carousel/js/vue-carousel.min.js"></script>
+<script src="./main.js"></script>
+<script src="./vue.js"></script>
+</body>
+</html>

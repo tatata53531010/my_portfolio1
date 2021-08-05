@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://tatata53531010.github.io/my_portfolio/main.css">
+    <title>アクセス｜CAT CAFE MIKU</title>
+</head>
+<body>
+<div id="wrapper">
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-light bg-light p-3">
+            <!-- ブランドロゴ -->
+            <a href="./index.html" class="navbar-brand">CAT CAFE MIKU</a>
+            <!-- 横幅が狭いときに出るハンバーガーボタン -->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- メニュー項目 -->
+            <div class="collapse navbar-collapse" id="nav-bar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">ホーム</a></li>
+                    <li class="nav-item"><a href="./introduction.html" class="nav-link">猫紹介</a></li>
+                    <li class="nav-item active"><a href="./access.html" class="nav-link">アクセス</a></li>
+                    <li class="nav-item"><a href="./menu.html" class="nav-link">メニュー</a></li>
+                    <li class="nav-item"><a href="./quiz.html" class="nav-link">クイズ</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">お問い合わせ</a></li>
+                    <li class="nav-item"><a href="./profile.html" class="nav-link">自己紹介</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ここまでヘッダー -->
+    <!-- メイン -->
+    <main>
+        <h2 class="space">アクセス</h2>
+            <!-- Googleマップを表示 -->
+            <div id="map_wrapper">
+                <div id="map"></div>
+                <div class="map_text">
+                    <p><img src="./map_item.png" alt="" width="14" height="22" style="margin: 0 5px 1px 0;">住所<br>
+                        〒000-9999 大阪府大阪市〇〇3-30-8
+                    </p>
+                     <p>大阪駅 南出口から徒歩2分<br>
+                        大阪駅南出口を出ます。<br>
+                        駅前商店街を国道999号線方面へ向かいます。<br>
+                        国道999号線を渡り直進します。<br>
+                        銀行ATMの角を左に曲がり2軒目の1階です。<br>
+                    </p>
+                </div>
+            </div>
+            
+
+            <!-- トップに戻るボタン -->
+            <a href="#" class="back-to-top">▲</a>
+            <div id="background_image">
+                <img src="./footer-bg.png" alt="">
+            </div>
+    </main>
+    <!-- ここまでメイン -->
+    <!-- フッター -->
+    <footer>
+        <div id="footer_nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="introduction.html">猫紹介</a></li>
+                <li><a href="access.html">アクセス</a></li>
+                <li><a href="menu.html">メニュー</a></li>
+                <li><a href="quiz.html">クイズ</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="profile.html">自己紹介</a></li>
+            </ul>
+        </div>
+        <small>&copy;2021 MIKU All Rights Reserved.</small>
+    </footer>
+    <!-- ここまでフッター -->
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS, then Font Awesome -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZGGnWMz0LQ9g8Gj8nEbCuusywc-iLtqI&callback=initMap" async defer>
+</script>
+<script src="main.js"></script>
+</body>
+</html>
